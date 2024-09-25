@@ -1,0 +1,68 @@
+Type: Markov
+Number of nodes: 3
+Number of arcs: 3
+Number of parameters: 0
+Node:
+Name: UP
+X, Y: 125,125
+LabelX, LabelY: 129,155
+
+Node:
+Name: D1
+X, Y: 245,45
+LabelX, LabelY: 249,75
+
+Node:
+Name: RP
+X, Y: 245,205
+LabelX, LabelY: 249,235
+
+Arc:
+Source: UP
+Dest: D1
+ArcPoints: [java.awt.Point[x=150,y=129], java.awt.Point[x=246,y=66]]
+ArcLoopValue: []
+LabelX, LabelY: 176,74
+Rate: 2/2500
+
+Arc:
+Source: D1
+Dest: RP
+ArcPoints: [java.awt.Point[x=262,y=74], java.awt.Point[x=262,y=205]]
+ArcLoopValue: []
+LabelX, LabelY: 240,143
+Rate: 1/0.5
+
+Arc:
+Source: RP
+Dest: UP
+ArcPoints: [java.awt.Point[x=246,y=213], java.awt.Point[x=150,y=150]]
+ArcLoopValue: []
+LabelX, LabelY: 176,184
+Rate: 1/0.5
+
+
+Output:
+Outputs created: 1
+Output name: Steady-state availability
+Time: null
+State: UP
+Grid values: 0
+Up_Down_config: CPU_attivo
+Reward_config: null
+InitProb_config: null
+Hashtable Init Prob: 0
+Hashtable Reward: 0
+Vector UP: [CPU_attivo]
+Hashtable UP: 1
+Name Up: CPU_attivo
+Values Up: [UP]
+Vector DOWN: [CPU_attivo]
+Hashtable DOWN: 1
+Name Down: CPU_attivo
+Values Down: [D1, RP]
+Vector Indice Text: []
+
+Needed:
+Reward Needed:true
+

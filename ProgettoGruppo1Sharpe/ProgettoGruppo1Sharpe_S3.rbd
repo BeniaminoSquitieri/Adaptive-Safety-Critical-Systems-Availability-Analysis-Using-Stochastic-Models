@@ -1,0 +1,237 @@
+Type: Reliability block diagrams
+
+SubModel:
+Name: S3
+Submodels Calling: [Sistema, Sistema, Sistema, Sistema]
+Number of series: 1
+Number of parallel: 0
+Number of bridge: 0
+System: serie0
+Number Blocks :4
+
+Block:
+Name: block0
+Description: null
+X, Y: 50,580
+K, N: 1,1
+leftNode: node0
+rightNode: node1
+leftConn: con0
+rightConn: con1
+inSystem: serie0
+Name Component: null
+Color: java.awt.Color[r=255,g=255,b=255]
+Hierarchy: storage
+Value Hierarchy: [Operational Availability, UP, , , ]
+Block label:
+X, Y: 57,606
+Width, Height: 48,19
+Textwidth: 0
+
+Block:
+Name: block1
+Description: null
+X, Y: 118,580
+K, N: 1,1
+leftNode: node1
+rightNode: node2
+leftConn: con2
+rightConn: con3
+inSystem: serie0
+Name Component: null
+Color: java.awt.Color[r=255,g=255,b=255]
+Hierarchy: SO
+Value Hierarchy: [Operational Availability, UP, , , ]
+Block label:
+X, Y: 125,606
+Width, Height: 48,19
+Textwidth: 0
+
+Block:
+Name: block2
+Description: null
+X, Y: 186,580
+K, N: 1,1
+leftNode: node2
+rightNode: node3
+leftConn: con4
+rightConn: con5
+inSystem: serie0
+Name Component: null
+Color: java.awt.Color[r=255,g=255,b=255]
+Hierarchy: HW
+Value Hierarchy: [Operational Availability, UP, , , ]
+Block label:
+X, Y: 193,606
+Width, Height: 48,19
+Textwidth: 0
+
+Block:
+Name: block3
+Description: null
+X, Y: 254,580
+K, N: 1,1
+leftNode: node3
+rightNode: node4
+leftConn: con6
+rightConn: con7
+inSystem: serie0
+Name Component: null
+Color: java.awt.Color[r=255,g=255,b=255]
+Hierarchy: CPU
+Value Hierarchy: [Operational Availability, UP, , , ]
+Block label:
+X, Y: 261,606
+Width, Height: 48,19
+Textwidth: 0
+
+Block:
+Name: block4
+Description: null
+X, Y: 322,580
+K, N: 1,1
+leftNode: node4
+rightNode: node5
+leftConn: con8
+rightConn: con9
+inSystem: serie0
+Name Component: null
+Color: java.awt.Color[r=255,g=255,b=255]
+Hierarchy: APP
+Value Hierarchy: [Operational Availability, UP, , , ]
+Block label:
+X, Y: 329,606
+Width, Height: 48,19
+Textwidth: 0
+
+Connector & Line:
+Number of connectors already created:10
+Number of lines already created:10
+
+Connector:
+Name:con0
+Number of lines:1
+Name:line0
+X1, Y1:40,594
+X2, Y2:50,594
+
+Connector:
+Name:con1
+Number of lines:1
+Name:line1
+X1, Y1:98,594
+X2, Y2:108,594
+
+Connector:
+Name:con2
+Number of lines:1
+Name:line2
+X1, Y1:108,594
+X2, Y2:118,594
+
+Connector:
+Name:con3
+Number of lines:1
+Name:line3
+X1, Y1:166,594
+X2, Y2:176,594
+
+Connector:
+Name:con4
+Number of lines:1
+Name:line4
+X1, Y1:176,594
+X2, Y2:186,594
+
+Connector:
+Name:con5
+Number of lines:1
+Name:line5
+X1, Y1:234,594
+X2, Y2:244,594
+
+Connector:
+Name:con6
+Number of lines:1
+Name:line6
+X1, Y1:244,594
+X2, Y2:254,594
+
+Connector:
+Name:con7
+Number of lines:1
+Name:line7
+X1, Y1:302,594
+X2, Y2:312,594
+
+Connector:
+Name:con8
+Number of lines:1
+Name:line8
+X1, Y1:312,594
+X2, Y2:322,594
+
+Connector:
+Name:con9
+Number of lines:1
+Name:line9
+X1, Y1:370,594
+X2, Y2:380,594
+
+Node infos:
+Number of nodes already created: 6
+
+Node:
+Name:node3
+X1, Y1:241,591
+Left structure:block2
+Right structure:block3
+
+Node:
+Name:node2
+X1, Y1:173,591
+Left structure:block1
+Right structure:block2
+
+Node:
+Name:node1
+X1, Y1:105,591
+Left structure:block0
+Right structure:block1
+
+Node:
+Name:node0
+X1, Y1:37,591
+Left structure:null
+Right structure:block0
+
+Node:
+Name:node5
+X1, Y1:377,591
+Left structure:block4
+Right structure:null
+
+Node:
+Name:node4
+X1, Y1:309,591
+Left structure:block3
+Right structure:block4
+
+Structure:
+Name: serie0
+Type Structure: series
+Width, Height:340,28
+leftNode: node0
+rightNode: node5
+leftConn: null
+rightConn: null
+inSystem: null
+Vector structure:[block0, block1, block2, block3, block4]
+
+
+
+Output:
+Outputs created: 1
+Output name: Steady-State Availability
+Time: null
+Grid values: 0

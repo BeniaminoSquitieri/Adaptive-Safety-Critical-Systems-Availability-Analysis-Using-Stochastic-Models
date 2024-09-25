@@ -1,0 +1,100 @@
+format 8 
+factor on 
+
+func reward_function() 
+if(#(P_upCNT) >= 1)
+1
+else
+0
+end
+
+end
+
+
+
+srn S2 
+  * == PLACE == 
+  P_upCNT 3
+  P_dnDCK 0
+  P_upDCK 1
+  P_dnCNT 0
+  P_upVM 1
+  P_dnVM 0
+  P_upHYP 1
+  P_upPHY 1
+  P_dnPHY 0
+  P_dnHYP 0
+  end
+  * == Timed Transitions == 
+  T_fCNT placedep P_upDCK 1/500 
+  T_rCNT placedep P_upDCK 1/0.000555556 
+  T_fDCK ind 1/1000 
+  T_rDCK ind 1/0.00138889 
+  T_fVM ind 1/2880 
+  T_rVM ind 1 
+  T_rHYP ind 1/2 
+  T_fHYYP ind 1/2880 
+  T_rPHY ind 1/8 
+  T_fPHY ind 1/60000 
+  end
+  * == Immediate Transitions ==  
+  t_CNT ind 0.5 priority 10 
+  t_DCK ind 0.5 priority 10 
+  t_VM ind 0.5 priority 10 
+  t_HYP ind 0.5 priority 10 
+  end
+  * == ARC == 
+  * Input Arcs 
+  P_upCNT T_fCNT 1
+  P_upDCK T_fDCK 1
+  P_dnDCK T_rDCK 1
+  P_upVM T_fVM 1
+  P_dnVM T_rVM 1
+  P_upVM t_VM 1
+  P_upDCK t_DCK 1
+  P_upCNT t_CNT 1
+  P_upPHY T_fPHY 1
+  P_upHYP T_fHYYP 1
+  P_dnPHY T_rPHY 1
+  P_dnHYP T_rHYP 1
+  P_upHYP t_HYP 1
+  P_dnCNT T_rCNT 1
+  end
+  * Output Arcs 
+  T_rCNT P_upCNT 1
+  T_fCNT P_dnCNT 1
+  T_fDCK P_dnDCK 1
+  T_rDCK P_upDCK 1
+  T_fVM P_dnVM 1
+  T_rVM P_upVM 1
+  t_VM P_dnVM 1
+  t_DCK P_dnDCK 1
+  t_CNT P_dnCNT 1
+  T_rPHY P_upPHY 1
+  T_rHYP P_upHYP 1
+  T_fPHY P_dnPHY 1
+  T_fHYYP P_dnHYP 1
+  t_HYP P_dnHYP 1
+  end
+  * Inhibtor Arcs 
+  P_dnVM T_rDCK 1
+  P_upVM t_DCK 1
+  P_upDCK t_CNT 1
+  P_dnHYP T_rVM 1
+  P_upHYP t_VM 1
+  P_upPHY t_HYP 1
+  P_dnPHY T_rHYP 1
+  P_dnDCK T_rCNT 1
+end
+
+
+echo **************************************************************************** 
+echo *********  Outputs asked for the model: S2 ************** 
+
+
+echo Expected reward rate in steady-state for: reward_function 
+var SS_ExpectedRewardRate srn_exrss(S2; reward_function)
+expr SS_ExpectedRewardRate
+
+
+end

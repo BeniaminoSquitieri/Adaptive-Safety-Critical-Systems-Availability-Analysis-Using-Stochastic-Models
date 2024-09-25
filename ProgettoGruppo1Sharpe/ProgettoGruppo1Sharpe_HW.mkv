@@ -1,0 +1,55 @@
+Type: Markov
+Number of nodes: 2
+Number of arcs: 2
+Number of parameters: 0
+Node:
+Name: UP
+X, Y: 245,165
+LabelX, LabelY: 249,195
+
+Node:
+Name: DOWN
+X, Y: 485,165
+LabelX, LabelY: 476,195
+
+Arc:
+Source: UP
+Dest: DOWN
+ArcPoints: [java.awt.Point[x=274,y=177], java.awt.Point[x=485,y=177]]
+ArcLoopValue: []
+LabelX, LabelY: 357,154
+Rate: 1/30000
+
+Arc:
+Source: DOWN
+Dest: UP
+ArcPoints: [java.awt.Point[x=485,y=182], java.awt.Point[x=274,y=182]]
+ArcLoopValue: []
+LabelX, LabelY: 357,185
+Rate: 1/4
+
+
+Output:
+Outputs created: 1
+Output name: Steady-state availability
+Time: null
+State: UP
+Grid values: 0
+Up_Down_config: HW_attivo
+Reward_config: null
+InitProb_config: null
+Hashtable Init Prob: 0
+Hashtable Reward: 0
+Vector UP: [HW_attivo]
+Hashtable UP: 1
+Name Up: HW_attivo
+Values Up: [UP]
+Vector DOWN: [HW_attivo]
+Hashtable DOWN: 1
+Name Down: HW_attivo
+Values Down: [DOWN]
+Vector Indice Text: []
+
+Needed:
+Reward Needed:true
+

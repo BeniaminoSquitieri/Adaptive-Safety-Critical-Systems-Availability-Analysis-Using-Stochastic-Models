@@ -1,0 +1,27 @@
+Type: Fault Tree
+
+SubModel:
+Name: sottosistemaS1
+Submodels Calling: [, S1, S1]
+Number Gate And: 0
+Number Gate Or: 0
+Number Gate KofN: 0
+Number Event: 0
+
+Top Event:
+Name: Failure
+Description: null
+X, Y: 1050,30
+BottomGate: null
+
+Level:
+vLevel:[]
+
+Connector & Line:
+Number of connectors already created:4
+Number of lines already created:6
+
+
+
+Output:
+Outputs created: 0

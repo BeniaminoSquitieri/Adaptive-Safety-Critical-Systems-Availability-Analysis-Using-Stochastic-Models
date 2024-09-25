@@ -1,0 +1,123 @@
+Type: Markov
+Number of nodes: 6
+Number of arcs: 8
+Number of parameters: 0
+Node:
+Name: UP
+X, Y: 165,205
+LabelX, LabelY: 169,235
+
+Node:
+Name: U1
+X, Y: 325,125
+LabelX, LabelY: 330,155
+
+Node:
+Name: U2
+X, Y: 685,125
+LabelX, LabelY: 690,155
+
+Node:
+Name: D2
+X, Y: 1045,205
+LabelX, LabelY: 1049,235
+
+Node:
+Name: D1
+X, Y: 565,45
+LabelX, LabelY: 569,75
+
+Node:
+Name: RP
+X, Y: 525,125
+LabelX, LabelY: 529,155
+
+Arc:
+Source: UP
+Dest: U1
+ArcPoints: [java.awt.Point[x=192,y=211], java.awt.Point[x=325,y=144]]
+ArcLoopValue: []
+LabelX, LabelY: 236,154
+Rate: 2/20000
+
+Arc:
+Source: U1
+Dest: D1
+ArcPoints: [java.awt.Point[x=353,y=132], java.awt.Point[x=565,y=62]]
+ArcLoopValue: []
+LabelX, LabelY: 437,74
+Rate: 1/20000
+
+Arc:
+Source: D1
+Dest: D2
+ArcPoints: [java.awt.Point[x=594,y=62], java.awt.Point[x=1046,y=212]]
+ArcLoopValue: []
+LabelX, LabelY: 798,114
+Rate: 1/0.5
+
+Arc:
+Source: U1
+Dest: RP
+ArcPoints: [java.awt.Point[x=354,y=137], java.awt.Point[x=525,y=137]]
+ArcLoopValue: []
+LabelX, LabelY: 417,114
+Rate: 1/0.5
+
+Arc:
+Source: RP
+Dest: U2
+ArcPoints: [java.awt.Point[x=554,y=137], java.awt.Point[x=685,y=137]]
+ArcLoopValue: []
+LabelX, LabelY: 597,114
+Rate: 1/0.5
+
+Arc:
+Source: U2
+Dest: D2
+ArcPoints: [java.awt.Point[x=714,y=140], java.awt.Point[x=1046,y=214]]
+ArcLoopValue: []
+LabelX, LabelY: 858,154
+Rate: 1/20000
+
+Arc:
+Source: U2
+Dest: UP
+ArcPoints: [java.awt.Point[x=685,y=144], java.awt.Point[x=194,y=220]]
+ArcLoopValue: []
+LabelX, LabelY: 417,185
+Rate: 1/0.33
+
+Arc:
+Source: D2
+Dest: UP
+ArcPoints: [java.awt.Point[x=1045,y=222], java.awt.Point[x=194,y=222]]
+ArcLoopValue: []
+LabelX, LabelY: 597,225
+Rate: 1
+
+
+Output:
+Outputs created: 1
+Output name: Steady-state availability
+Time: null
+State: UP
+Grid values: 0
+Up_Down_config: attivo
+Reward_config: null
+InitProb_config: null
+Hashtable Init Prob: 0
+Hashtable Reward: 0
+Vector UP: [attivo]
+Hashtable UP: 1
+Name Up: attivo
+Values Up: [UP, U1, U2]
+Vector DOWN: [attivo, attivo, attivo]
+Hashtable DOWN: 1
+Name Down: attivo
+Values Down: [D2, D1, RP]
+Vector Indice Text: []
+
+Needed:
+Reward Needed:true
+

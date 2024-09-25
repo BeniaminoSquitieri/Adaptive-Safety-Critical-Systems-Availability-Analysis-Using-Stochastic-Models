@@ -1,0 +1,11 @@
+Configurazioni possibili per l'availability desiderata = 0.999999 e massima ridondanza = 3
+
+Nome:S1_S2_S3_1
+Configurazione: [(S1, 2), (S2, 3), (S3, 3), ]
+Costo: 5.800000000000001
+ Disponibilita' stazionaria: 0.9999998427785765
+
+Nome:S1_S2_S3_2
+Configurazione: [(S1, 3), (S2, 3), (S3, 3), ]
+Costo: 6.0
+ Disponibilita' stazionaria: 0.9999999945052628
